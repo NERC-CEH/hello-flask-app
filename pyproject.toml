@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-flask-app"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Lewis Chambers", email = "lewcha@ceh.ac.uk"},
+]
+dependencies = [
+    "flask>=3.0.3",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.setuptools]
+packages = ["hello_flask_app"]
+package-dir = {"" = "src"}
+
+[tool.pdm]
+distribution = false
