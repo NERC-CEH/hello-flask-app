@@ -29,6 +29,6 @@ spec:
       containers:
       - name: hello-flask-app
         image: hello-flask-app:latest
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
