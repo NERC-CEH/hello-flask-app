@@ -7,9 +7,9 @@ spec:
     app: hello-flask-app
   ports:
   - protocol: "TCP"
-    port: 6000
-    targetPort: 5000
-  type: LoadBalancer
+    port: 80
+    targetPort: 80
+  type: NodePort
 
 ---
 apiVersion: apps/v1
@@ -20,7 +20,7 @@ spec:
   selector:
     matchLabels:
       app: hello-flask-app
-  replicas: 4
+  replicas: 2
   template:
     metadata:
       labels:
@@ -31,4 +31,4 @@ spec:
         image: 654654490827.dkr.ecr.eu-west-2.amazonaws.com/hello-flask-app:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 5000
+        - containerPort: 80
