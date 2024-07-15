@@ -5,5 +5,5 @@ WORKDIR /app
 ADD . /app
 RUN pip install .
 
-EXPOSE 5000
-CMD ["python", "/src/hello_flask_app/main.py"]
+EXPOSE 80
+CMD ["python", "src/hello_flask_app/main.py"]
