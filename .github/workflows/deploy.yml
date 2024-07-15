@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - "kustomize"
+      - "kustomize/**"
   pull_request:
     branches: [main]
     paths-ignore:
-      - "kustomize"
+      - "kustomize/**"
 
 permissions:
   id-token: write
