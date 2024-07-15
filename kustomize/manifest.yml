@@ -21,6 +21,8 @@ spec:
     matchLabels:
       app: hello-flask-app
   replicas: 2
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
