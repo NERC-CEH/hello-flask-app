@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-flask-app
-        image: hello-flask-app:latest
+        image: 654654490827.dkr.ecr.eu-west-2.amazonaws.com/hello-flask-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

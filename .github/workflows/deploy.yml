@@ -3,8 +3,12 @@ name: Deploy the code to ECR
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "kustomize"
   pull_request:
     branches: [main]
+    paths-ignore:
+      - "kustomize"
 
 permissions:
   id-token: write
